@@ -1,4 +1,5 @@
 from tkinter import *
+import webbrowser as w
 
 class Window(Frame):
 
@@ -7,17 +8,17 @@ class Window(Frame):
         self.master = master
         self.init_window()
 
+    def open_url(self):
+        w.open('http://terokarvinen.com/2018/aikataulu--palvelinten-hallinta-ict4tn022-3004-ti-ja-3002-to--loppukevat-2018-5p')
+
     def init_window(self):
 
         self.master.title('bing bing wahoo')
         self.pack(fill=BOTH, expand=1)
 
-        yy = 0
-        for x in range(5):
-            buttontext = 'testbutton'+str(x+1)
-            butt = Button(self, text=buttontext, width=10, height=2)
-            butt.place(x=50, y=yy)
-            yy += 50
+        butt = Button(self, text='kurssisivut', width=10, height=2, command=self.open_url)
+        butt.place(x=50, y=50)
+
 top = Tk()
 top.geometry('200x300')
 app = Window(top)

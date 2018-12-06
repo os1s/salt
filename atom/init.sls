@@ -10,3 +10,11 @@ base:
   pkg.latest:
     - name: atom
     - refresh: True
+
+/etc/atomconfig666:
+  file.recurse:
+    - source: salt://atom/atomconfig
+    - file_mode: 750
+
+'export ATOM_HOME=/etc/atomconfig666':
+  cmd.run
