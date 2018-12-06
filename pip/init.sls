@@ -4,9 +4,10 @@ python-pip:
       - python-pip
       - python3-pip
 
-venv:
+pippackages:
   pip.installed:
-    - name: virtualenv
+    - pkgs:
+      - virtualenv
     - bin_env: '/usr/bin/pip3'
     - require:
       - pkg: python-pip
