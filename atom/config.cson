@@ -1,0 +1,6 @@
+'*':
+  'editor':
+    'fontSize': 20
+    'tabLength': 4
+  'welcome':
+    'showOnStartup': false

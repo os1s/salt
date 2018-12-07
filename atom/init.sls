@@ -1,3 +1,5 @@
+{% set user = 'osku' %}
+{% set configfiles = ['config.cson','style.less','packages.cson'] %}
 base:
   pkgrepo.managed:
     - humanname: Atom
@@ -7,14 +9,11 @@ base:
       - pkg: atom
     - key_url: https://packagecloud.io/AtomEditor/atom/gpgkey
 
-  pkg.latest:
+  pkg.installed:
     - name: atom
-    - refresh: True
 
-/etc/atomconfig666:
-  file.recurse:
-    - source: salt://atom/atomconfig
-    - file_mode: 750
-
-'export ATOM_HOME=/etc/atomconfig666':
-  cmd.run
+{% for x in configfiles %}
+/home/{{ user }}/.atom/{{ x }}:
+  file.managed:
+    - source: salt://atom/{{ x }}
+{% endfor %}
