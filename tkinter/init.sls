@@ -1,13 +1,17 @@
+{% from 'top.sls' import user %}
+
 python3-tk:
   pkg.installed
 
-/etc/testfiles:
+/etc/templates:
   file.directory
 
-/etc/testfiles/template.py:
+/etc/templates/template.py:
   file.managed:
     - source: salt://tkinter/template.py
-    - mode: 644
+    - mode: 744
+    - user: {{ user }}
+    - group: {{ user }}
     - require:
       - pkg: python3-tk
-      - file: /etc/testfiles
+      - file: /etc/templates

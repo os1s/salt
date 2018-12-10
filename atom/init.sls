@@ -1,4 +1,4 @@
-{% set user = 'osku' %}
+{% from 'top.sls' import user %}
 {% set configfiles = ['config.cson','style.less','packages.cson'] %}
 
 base:

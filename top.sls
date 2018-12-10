@@ -1,3 +1,5 @@
+{% set user = 'osku' %}
+
 base:
   '*':
     - git
