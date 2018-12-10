@@ -14,7 +14,10 @@ base:
     - name: atom
 
 /home/{{ user }}/.atom:
-  file.directory
+  file.directory:
+    - user: {{ user }}
+    - group: {{ user }}
+    - mode: 744
 
 {% for x in configfiles %}
 /home/{{ user }}/.atom/{{ x }}:
@@ -27,3 +30,11 @@ base:
       - pkg: atom
       - file: /home/{{ user }}/.atom
 {% endfor %}
+
+/home/{{ user }}/.atom/packages:
+  file.recurse:
+    - user: {{ user }}
+    - dir_mode: 744
+    - file_mode: 744
+    - source: salt://atom/packages
+    - include_empty: True
