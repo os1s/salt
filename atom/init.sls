@@ -1,4 +1,4 @@
-{% set user = 'osku' %}
+{% set user = 'xubuntu' %}
 {% set configfiles = ['config.cson','styles.less','keymap.cson'] %}
 
 base:
@@ -13,6 +13,9 @@ base:
   pkg.installed:
     - name: atom
 
+/home/{{ user }}/.atom:
+  file.directory
+
 {% for x in configfiles %}
 /home/{{ user }}/.atom/{{ x }}:
   file.managed:
@@ -20,4 +23,7 @@ base:
     - user: {{ user }}
     - group: {{ user }}
     - mode: 644
+    - require:
+      - pkg: atom
+      - file: /home/{{ user }}/.atom
 {% endfor %}
