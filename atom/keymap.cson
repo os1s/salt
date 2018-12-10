@@ -1,2 +1,6 @@
-'atom-workspace atom-text-editor':
-  'shift-k': 'editor:delete-line'
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+  'ctrl-d': 'editor:delete-line'
+
+'atom-workspace':
+  'shift-q': 'pane:show-previous-item'
+  'shift-e': 'pane:show-next-item'
