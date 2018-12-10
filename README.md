@@ -1,3 +1,3 @@
-# Salt miniprojekti
+# Salt miniproject
 
-Asentaa ja konfiguroi ohjelmat joita tulee käytettyä paljon.
+Installs and configures a few things to my liking
