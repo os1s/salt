@@ -4,9 +4,10 @@ python3-tk:
 /etc/testfiles:
   file.directory
 
-/etc/testfiles/testi.py:
+/etc/testfiles/template.py:
   file.managed:
-    - source: salt://tkinter/test.py
+    - source: salt://tkinter/template.py
+    - mode: 644
     - require:
       - pkg: python3-tk
       - file: /etc/testfiles

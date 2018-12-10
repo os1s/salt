@@ -1,5 +1,6 @@
 {% set user = 'osku' %}
 {% set configfiles = ['config.cson','style.less','packages.cson'] %}
+
 base:
   pkgrepo.managed:
     - humanname: Atom
@@ -16,4 +17,7 @@ base:
 /home/{{ user }}/.atom/{{ x }}:
   file.managed:
     - source: salt://atom/{{ x }}
+    - user: {{ user }}
+    - group: {{ user }}
+    - mode: 644
 {% endfor %}

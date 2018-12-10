@@ -1,6 +1,8 @@
 '*':
   'editor':
-    'fontSize': 20
+    'fontSize': 14
     'tabLength': 4
+    'tabType': 'hard'
+    'showIndentGuide': true
   'welcome':
     'showOnStartup': false

@@ -10,4 +10,4 @@ pippackages:
       - virtualenv
     - bin_env: '/usr/bin/pip3'
     - require:
-      - pkg: python-pip
+      - pkg: python-pip     
