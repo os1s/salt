@@ -16,6 +16,4 @@ sleep 1
 sudo systemctl restart salt-minion.service
 sleep 5
 sudo salt-key -A --yes
-sleep 1
-sudo salt '*' state.apply
 echo "All done(maybe)"
