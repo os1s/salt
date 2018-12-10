@@ -1,4 +1,4 @@
-{% from 'top.sls' import user %}
+{% from 'atom/init.sls' import user %}
 
 python3-tk:
   pkg.installed

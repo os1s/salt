@@ -1,8 +1,6 @@
-{% set user = 'osku' %}
-
 base:
   '*':
-    - git
     - atom
+    - git
     - pip
     - tkinter

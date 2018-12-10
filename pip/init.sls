@@ -1,13 +1,14 @@
-python-pip:
+pip:
   pkg.installed:
     - pkgs:
       - python-pip
       - python3-pip
 
-pippackages:
+pip-packages:
   pip.installed:
     - pkgs:
       - virtualenv
-    - bin_env: '/usr/bin/pip3'
+      - matplotlib
     - require:
-      - pkg: python-pip     
+      - pkg: pip
+#   - bin_env: '/usr/bin/pip3'

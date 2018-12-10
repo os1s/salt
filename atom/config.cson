@@ -6,3 +6,5 @@
     'showIndentGuide': true
   'welcome':
     'showOnStartup': false
+  'core':
+    'telemetryConsent': 'no'

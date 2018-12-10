@@ -1,5 +1,5 @@
-{% from 'top.sls' import user %}
-{% set configfiles = ['config.cson','style.less','packages.cson'] %}
+{% set user = 'osku' %}
+{% set configfiles = ['config.cson','styles.less','keymap.cson'] %}
 
 base:
   pkgrepo.managed:

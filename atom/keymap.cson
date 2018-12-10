@@ -1,0 +1,2 @@
+'atom-workspace atom-text-editor':
+  'shift-k': 'editor:delete-line'
