@@ -1,1 +1,0 @@
-{% set user = 'osku' %}
