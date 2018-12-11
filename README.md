@@ -53,7 +53,7 @@ base:
 {% for x in configfiles %}
 /home/{{ user }}/.atom/{{ x }}:
   file.managed:
-    - source: salt://atom/{{ x??}}
+    - source: salt://atom/{{ x }}
     - user: {{ user }}
     - group: {{ user }}
     - mode: 744
@@ -120,7 +120,7 @@ python3-tk:
     - source: salt://tkinter/template.py
     - mode: 744
     - user: {{ user }}
-    - group: {{??user }}
+    - group: {{ user }}
     - require:
       - pkg: python3-tk
       - file: /etc/templates
