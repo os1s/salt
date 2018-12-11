@@ -28,7 +28,7 @@ echo "All done(maybe)"
 
 init.sls:
 
-```
+```salt
 {% set user = 'xubuntu' %}
 {% set configfiles = ['config.cson','styles.less','keymap.cson'] %}
 
