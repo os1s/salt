@@ -2,7 +2,7 @@
 
 Installs and configures a few things to my liking
 ### setup script
-```
+```bash
 #!/bin/bash
 
 HOSTNAME="$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')"
@@ -127,7 +127,7 @@ python3-tk:
 ```
 
 template.py:
-```
+```python3
 #!/usr/bin/python3
 
 from tkinter import *
