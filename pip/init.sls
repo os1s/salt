@@ -11,4 +11,4 @@ pip-packages:
       - matplotlib
     - require:
       - pkg: pip
-#   - bin_env: '/usr/bin/pip3'
+    - bin_env: '/usr/bin/pip3'
