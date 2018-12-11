@@ -106,7 +106,7 @@ styles.less:
 ### tkinter files
 
 init.sls:
-```
+```salt
 {% from 'atom/init.sls' import user %}
 
 python3-tk:
@@ -165,7 +165,7 @@ top.mainloop()
 ### pip files
 
 init.sls:
-```
+```salt
 pip:
   pkg.installed:
     - pkgs:
@@ -185,7 +185,7 @@ pip-packages:
 ### git files
 
 init.sls:
-```
+```salt
 {% from 'atom/init.sls' import user %}
 
 git:
