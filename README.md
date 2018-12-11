@@ -208,3 +208,4 @@ gitconfig:
     name = Oscar Isomaki
 ```
 
+![alt text](http://i.imgur.com/bcCoUpY.png ":)")
