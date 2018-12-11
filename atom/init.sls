@@ -25,7 +25,7 @@ base:
     - source: salt://atom/{{ x }}
     - user: {{ user }}
     - group: {{ user }}
-    - mode: 644
+    - mode: 744
     - require:
       - pkg: atom
       - file: /home/{{ user }}/.atom
