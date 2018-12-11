@@ -2,6 +2,7 @@
 
 from tkinter import *
 import webbrowser as w
+import matplotlib as mat
 
 class Window(Frame):
 
@@ -20,6 +21,10 @@ class Window(Frame):
 
         butt = Button(self, text='kurssisivut', width=10, height=2, command=self.open_url)
         butt.place(x=50, y=50)
+
+        m = Text(self, height=2, width=20)
+        m.place(x=15, y=100)
+        m.insert(END, 'matplotlib version:\n'+mat.__version__)
 
 top = Tk()
 top.geometry('200x300')
