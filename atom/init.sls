@@ -1,4 +1,4 @@
-{% set user = 'testaaja' %}
+{% set user = 'xubuntu' %}
 {% set configfiles = ['config.cson','styles.less','keymap.cson'] %}
 
 base:
